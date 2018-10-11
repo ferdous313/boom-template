@@ -1,0 +1,18 @@
+
+1. This helped solve:risc-tools/riscv-gnu-toolchain/
+git clone git://sourceware.org/git/binutils-gdb.git
+
+2.rename as riscv-binutils-gdb.git
+mv binutils-gdb riscv-binutils-gdb
+
+3. Upgraded the gcc and now it is making fine.
+Added these 2 headers in riscv-gcc/gcc/graphite.h
+#include <isl/id.h>
+#include <isl/space.h>
+
+4.mada0:~/boom-template/scripts$emacs build-tools.sh
+remove riscv-gnu-toolchain from
+(cd rocket-chip && git submodule update --init riscv-tools)
+(cd rocket-chip/riscv-tools && git submodule update --init --recursive riscv-isa-sim riscv-fesvr riscv-pk riscv-opcodes riscv-tests  riscv-openocd)
+
+5. 

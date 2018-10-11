@@ -1,0 +1,8 @@
+
+1. This helped solve:risc-tools/riscv-gnu-toolchain/
+git clone git://sourceware.org/git/binutils-gdb.git
+
+2 Upgraded the gcc and now it is making fine.
+Added these 2 headers in riscv-gcc/gcc/graphite.h
+#include <isl/id.h>
+#include <isl/space.h>
